@@ -108,7 +108,7 @@ You should now be able to curl the nginx Service on <CLUSTER-IP>:<PORT> from any
 ```
 kubectl run -i --tty load-generator --image=busybox /bin/sh
 ```
-To go into the cluster and then try with the ClusterIP:
+To go into the cluster and then try with the ClusterIP, your ClusterIP will be different:
 ```
 wget -q -O - 10.100.225.196
 ```
