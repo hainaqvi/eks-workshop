@@ -15,10 +15,14 @@ Deploy the updated demo application chart:
 helm upgrade workshop ~/environment/eksdemo
 ```
 
-The rolling upgrade will begin by creating a new nodejs pod with the new image. The new `ecsdemo-nodejs` Pod should fail to pull non-existing image. Run `kubectl get pods` to see the `ImagePullBackOff` error.
+The rolling upgrade will begin by creating a new nodejs pod with the new image. The new `ecsdemo-nodejs` Pod should fail to pull non-existing image. Run `kubectl get pods` 
+```
+kubectl get pods
+```
+You will see the `ImagePullBackOff` error, as follows.
 
 ```
-$ kubectl get pods
+
 NAME                               READY   STATUS             RESTARTS   AGE
 ecsdemo-crystal-844d84cb86-56gpz   1/1     Running            0          23m
 ecsdemo-crystal-844d84cb86-5vvcg   1/1     Running            0          23m
