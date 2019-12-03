@@ -15,6 +15,10 @@ the EKS IAM authentication, so we will disable it and rely on the IAM role inste
 - Close the Preferences tab
 ![c9disableiam](/images/c9disableiam.png)
 
+{{% notice info %}}
+If you have two Cloud9 browser tabs open, your Cloud9 IAM role changes will not persist. Make sure you have only one Cloud9 tab/window open when making these changes. 
+{{% /notice %}}
+
 To ensure temporary credentials aren't already in place we will also remove
 any existing credentials file:
 ```
